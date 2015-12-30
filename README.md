@@ -71,14 +71,14 @@ a ? b : c
 
 
 ### Logical Operators
-```
+```swift
 !a
 a && b //Logical and
 a || b //Logical or
 ```
 
 ### Bitwise Operators
-```
+```swift
 ~   // bitwise not
 &   // bitwise and
 |   // bitwise or
@@ -89,7 +89,7 @@ a || b //Logical or
 
 ### Range Operators
 
-```
+```swift
 //Closed range
 a...b
 
@@ -98,14 +98,14 @@ a ..< b
 ```
 
 ### Others
-```
+```swift
 //Nil coalescing
 a ?? b
 ```
 
 ## Collection types
 ### Array
-```
+```swift
 // Declaration
 var array1 = [Int]()
 var array2 : [Int] = []
@@ -135,7 +135,7 @@ for (index, value) in array3 {
 ```
 
 ### Dictionary
-```
+```swift
 // Declaration
 var dict1 = Dictionary<Int, String>()
 var dict2 = [String:String]()
@@ -163,7 +163,7 @@ for key in dict3.keys.sort() {
 ```
 
 ### Set
-```
+```swift
 // Declaration
 var set1 = Set<String>()
 var set2 : Set<String> = ["String1", String2]
@@ -187,7 +187,7 @@ for item in set2 {
 
 ## Control structure
 
-```
+```swift
 // If-else
 if a < b {
   //Do something
@@ -243,7 +243,7 @@ func test(name: String){
 ```
 
 ## Classes
-```
+```swift
 // Declaration
 class AClass {
   var a = 0
@@ -267,7 +267,7 @@ var b2 = AStructure(width: 1, height: 2, depth: 3)
 ```
 
 ## Enumerations
-```
+```swift
 // Declaration
 enum LogType {
   case Info
@@ -290,7 +290,7 @@ let mode = OperationMode2.Create.rawValue // mode is "Create"
 ```
 
 ## Protocols
-```
+```swift
 // Declaration
 protocol SomeProtocol {
 }
@@ -303,7 +303,7 @@ protocol SomeProtocol {
 ```
 
 ## Functions
-```
+```swift
 
 // Declaration
 func sayHello(personName:String) -> String {
@@ -379,7 +379,7 @@ func chooseStepFunction(backwards: Bool) -> (Int) -> Int {
 ## Closure
 
 ## Error handling
-```
+```swift
 enum VendingMachineError: ErrorType {
     case InvalidSelection
     case InsufficientFunds(coinsNeeded: Int)
@@ -423,7 +423,7 @@ public
 internal
 private
 
-```
+```swift
 public class SomePublicClass {}
 internal class SomeInternalClass {}
 private class SomePrivateClass {}
@@ -437,7 +437,7 @@ private func somePrivateFunction() {}
 
 
 ## Extensions
-```
+```swift
 extension SomeType {
 }
 
