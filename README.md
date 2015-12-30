@@ -8,6 +8,31 @@ for those who already had programming experience on swift or other languages.
 For more thorough information on Swift language itself I recommend going to apple's swift documentation site.
 If you are looking for quick guides with more detailed descriptions, there are a couple of cheatsheet repositories out there that did a great job and I myself also benefit a lot from them.
 
+## Table of Contents
+- [Variable and Constant](https://github.com/Azuritul/SwiftSyntaxQuickReference#variable-and-constant)
+- [Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#operators)
+  - [Arithmetic Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#arithmetic-operators)
+  - [Logical Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#logical-operators)
+  - [Bitwise Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#bitwise-operators)
+  - [Range Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#range-operators)
+  - [Others](https://github.com/Azuritul/SwiftSyntaxQuickReference#others)
+- [Collection Types](https://github.com/Azuritul/SwiftSyntaxQuickReference#collection-types)
+  - [Array](https://github.com/Azuritul/SwiftSyntaxQuickReference#array)
+  - [Set](https://github.com/Azuritul/SwiftSyntaxQuickReference#set)
+  - [Dictionary](https://github.com/Azuritul/SwiftSyntaxQuickReference#dictionary)
+- [Control Structure](https://github.com/Azuritul/SwiftSyntaxQuickReference#control-structure)
+- [Classes](https://github.com/Azuritul/SwiftSyntaxQuickReference#classes)
+- [Enumerations](https://github.com/Azuritul/SwiftSyntaxQuickReference#enumerations)
+- [Protocols](https://github.com/Azuritul/SwiftSyntaxQuickReference#protocols)
+- [Functions](https://github.com/Azuritul/SwiftSyntaxQuickReference#functions)
+- [Closure]
+- [Error Handling](https://github.com/Azuritul/SwiftSyntaxQuickReference#error-handling)
+- [Type Casting](https://github.com/Azuritul/SwiftSyntaxQuickReference#type-casting)
+- [Access Control](https://github.com/Azuritul/SwiftSyntaxQuickReference#access-control)
+- [Generics]
+- [Extensions](https://github.com/Azuritul/SwiftSyntaxQuickReference#extensions)
+- [Optionals]
+
 ## Variable and Constant
 
 ```
