@@ -35,7 +35,7 @@ If you are looking for quick guides with more detailed descriptions, there are a
 
 ## Variable and Constant
 
-```
+```swift
 var a = "Hello world"  // Variable
 let b = 2              // Constant
 ```
@@ -44,7 +44,7 @@ let b = 2              // Constant
 
 ### Arithmetic Operators
 
-```
+```swift
 var a = 6 + 6
 var b = 5 - 2
 var c = a * b
