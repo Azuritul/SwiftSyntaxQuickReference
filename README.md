@@ -8,6 +8,8 @@ for those who already had programming experience on swift or other languages.
 For more thorough information on Swift language itself I recommend going to apple's swift documentation site.
 If you are looking for quick guides with more detailed descriptions, there are a couple of cheatsheet repositories out there that did a great job and I myself also benefit a lot from them.
 
+**Notes** There are still many sections missing here. Feel free to add to this document.
+
 ## Table of Contents
 - [Variable and Constant](https://github.com/Azuritul/SwiftSyntaxQuickReference#variable-and-constant)
 - [Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#operators)
@@ -318,6 +320,7 @@ func sayHelloWorld() {
   print("Hello World")
 }
 
+/** Function return function **/
 func minMax(array:[Int]) -> (min:Int, max:Int)? {
   var currentMin = array[0]
   var currentMax = array[array.count - 1]
@@ -329,7 +332,7 @@ print(sayHello("Foobar")) // print "Hello Foobar!"
 print(sayHello2("Chris", lastName:"Jeter")) // print "Hello Chris Jeter!"
 sayHelloWorld() // print "Hello World"
 
-// External name and internal name
+/** External name and internal name **/
 func someFunction(firstParam: Int, secondParam: Int) {
 }
 someFunction(1, secondParam: 2)               
@@ -373,7 +376,6 @@ func chooseStepFunction(backwards: Bool) -> (Int) -> Int {
     // Do something...
 }
 
-
 ```
 
 ## Closure
@@ -387,11 +389,12 @@ enum VendingMachineError: ErrorType {
 }
 throw VendingMachineError.InvalidSelection
 
+/** Function throws error **/
 func functionThrowError() throws -> String {
   throw VendingMachineError.OutOfStock
 }
 
-// Do catch
+/** Do catch **/
 var vendingMachine = VendingMachine()
 vendingMachine.coinsDeposited = 8
 do {
@@ -404,10 +407,8 @@ do {
     print("Insufficient funds. Please insert an additional \(coinsNeeded) coins.")
 }
 
-
 let x = try? someThrowingFunction()
 let photo = try! loadImage("./Resources/John Appleseed.jpg")
-
 ```
 
 ## Type Casting
