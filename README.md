@@ -53,11 +53,11 @@ var c = a * b
 var d = 8 / 8
 var e = 9 % 3
 
-//Increment and decrement
+/** Increment and decrement **/
 i++
 i--
 
-//Comparison
+/** Comparison **/
 a == b  //equal
 a != b
 a === b //identical
@@ -67,7 +67,7 @@ a < b
 a >= b
 a <= b
 
-// ternary
+/** ternary **/
 a ? b : c
 ```
 
@@ -92,41 +92,41 @@ a || b //Logical or
 ### Range Operators
 
 ```swift
-//Closed range
+/** Closed range **/
 a...b
 
-//Half-Open range
+/** Half-Open range **/
 a ..< b
 ```
 
 ### Others
 ```swift
-//Nil coalescing
+/** Nil coalescing **/
 a ?? b
 ```
 
 ## Collection types
 ### Array
 ```swift
-// Declaration
+/** Declaration **/
 var array1 = [Int]()
 var array2 : [Int] = []
 var array3 : Array<String> = ["Apple", "Strawberry"]
 
-// Addition
+/** Addition **/
 var array4 = array1 + array2
 array3.append("Grape")
 
-// Removal
+/** Removal **/
 array3.removeAtIndex(1)
 
-// Retrieval
+/** Retrieval **/
 let item = array3[0]
 
-// Update
+/** Update **/
 array3[0] = "Pear"
 
-// Iteration
+/** Iteration **/
 for item in array3 {
   print(item)
 }
@@ -138,21 +138,21 @@ for (index, value) in array3 {
 
 ### Dictionary
 ```swift
-// Declaration
+/** Declaration **/
 var dict1 = Dictionary<Int, String>()
 var dict2 = [String:String]()
 var dict3 = ["key1": "value1", "key2": "value2"]
 
-// Insertion
+/** Insertion **/
 dict3["key3"] = "value3"
 
-// Modification
+/** Modification **/
 dict3["key1"] = "new value 1"
 
-// Removal
+/** Removal **/
 dict3.removeValueForKey("key2")
 
-// Iteration
+/** Iteration **/
 for (key, value) in dict3 {
   print(key, value)
 }
@@ -166,31 +166,30 @@ for key in dict3.keys.sort() {
 
 ### Set
 ```swift
-// Declaration
+/** Declaration **/
 var set1 = Set<String>()
 var set2 : Set<String> = ["String1", String2]
 set1 = [] // empty set
 
-// Insertion
+/** Insertion **/
 set2.insert("String3")
 
-// Removal
+/** Removal **/
 set2.remoe("String1")
 
-// Retrieval
+/** Retrieval **/
 var item = set2[set2.startIndex.advancedBy(1)]
 
-// Iteration
+/** Iteration **/
 for item in set2 {
   print(item)
 }
 ```
 
-
 ## Control structure
 
+### If-else
 ```swift
-// If-else
 if a < b {
   //Do something
 } else if a == b {
@@ -198,8 +197,9 @@ if a < b {
 } else {
   //Do something
 }
-
-// For loop
+```
+### For loop
+```swift
 for item in array {
   //Do something
 }
@@ -211,8 +211,9 @@ for index in 1...5 {
 for var i = 0; i < 5; i++ {
   //Do something
 }
-
-// While loop
+```
+### While
+```swift
 while a == b {
   //Do something
 }
@@ -220,10 +221,11 @@ while a == b {
 repeat {
   //Do something
 } while a == b
+```
 
-
-
-// Switch case, Swift has no implicit fall through of case values so no need to break
+### Switch case
+```swift
+// Swift does not have implicit fall through of case values so there's no need for the break keyword
 switch letter {
   case "A", "B":
     //Do something
@@ -232,8 +234,10 @@ switch letter {
   default:
     //Do something
 }
+```
 
-// Guard
+### Guard
+```swift
 func test(name: String){
   guard let name = name else {
     return
@@ -241,12 +245,11 @@ func test(name: String){
 
   // Do something
 }
-
 ```
 
 ## Classes
 ```swift
-// Declaration
+/** Declaration **/
 class AClass {
   var a = 0
   var b : String?
@@ -261,16 +264,41 @@ struct AStructure {
   // structure definition goes here
 }
 
-// Instantiation
+/** Instantiation **/
 var a = AClass()
 var b = AStructure()
 // All structure have auto-generated memberwise initializer
 var b2 = AStructure(width: 1, height: 2, depth: 3)
 ```
 
+## Classes
+```swift
+/** Declaration **/
+class AClass {
+  var a = 0
+  var b : String?
+  let c = "string"
+
+}
+
+struct AStructure {
+  var width = 0
+  var height = 0
+  var depth : Int?
+  // structure definition goes here
+}
+
+/** Instantiation **/
+var a = AClass()
+var b = AStructure()
+
+// All structures have auto-generated memberwise initializer
+var b2 = AStructure(width: 1, height: 2, depth: 3)
+```
+
 ## Enumerations
 ```swift
-// Declaration
+/** Declaration **/
 enum LogType {
   case Info
   case Warning
@@ -286,14 +314,14 @@ enum OperationMode2 : String {
   case Create, Read, Update, Delete
 }
 
-// Use
+/** Usage **/
 var operation = OperationMode.Read
 let mode = OperationMode2.Create.rawValue // mode is "Create"
 ```
 
 ## Protocols
 ```swift
-// Declaration
+/** Declaration **/
 protocol SomeProtocol {
 }
 
@@ -306,8 +334,7 @@ protocol SomeProtocol {
 
 ## Functions
 ```swift
-
-// Declaration
+/** Declaration **/
 func sayHello(personName:String) -> String {
   return "Hello \(personName)!"
 }
@@ -413,16 +440,20 @@ let photo = try! loadImage("./Resources/John Appleseed.jpg")
 
 ## Type Casting
 
-is  //Check type
-as? //Downcast
-as! //Downcast
-as  //Match is switch case
+|Casting Operators|Usage|
+|---|---|
+|is|  Check type|
+|as?| Downcast|
+|as!| Downcast|
+|as|  Match is switch case|
 
 
 ## Access Control
-public
-internal
-private
+|Keywords|
+|---|
+|public|
+|internal|
+|private|
 
 ```swift
 public class SomePublicClass {}
