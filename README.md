@@ -139,7 +139,7 @@ for item in array3 {
   print(item)
 }
 
-for (index, value) in array3 {
+for (index, value) in array3.enumerate() {
   print("\(index) is \(value) ")
 }
 ```
