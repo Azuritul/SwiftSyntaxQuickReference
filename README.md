@@ -14,6 +14,7 @@ If you are looking for quick guides with more detailed descriptions, there are a
 - [Variable and Constant](https://github.com/Azuritul/SwiftSyntaxQuickReference#variable-and-constant)
 - [Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#operators)
   - [Arithmetic Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#arithmetic-operators)
+  - [Comparison Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#comparison-operators)
   - [Logical Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#logical-operators)
   - [Bitwise Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#bitwise-operators)
   - [Range Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#range-operators)
@@ -44,8 +45,14 @@ let b = 2              // Constant
 
 ## Operators
 
-### Arithmetic Operators
+* [Arithmetic Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#arithmetic-operators)
+* [Comparison Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#comparison-operators)
+* [Logical Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#logical-operators)
+* [Bitwise Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#bitwise-operators)
+* [Range Operators](https://github.com/Azuritul/SwiftSyntaxQuickReference#range-operators)
+* [Others](https://github.com/Azuritul/SwiftSyntaxQuickReference#others)
 
+### Arithmetic Operators
 ```swift
 var a = 6 + 6
 var b = 5 - 2
@@ -56,21 +63,19 @@ var e = 9 % 3
 /** Increment and decrement **/
 i++
 i--
+```
 
-/** Comparison **/
+### Comparison Operators
+```swift
 a == b  //equal
-a != b
+a != b  //not equal
 a === b //identical
 a !== b //not identical
 a > b
 a < b
 a >= b
 a <= b
-
-/** ternary **/
-a ? b : c
 ```
-
 
 ### Logical Operators
 ```swift
@@ -103,6 +108,9 @@ a ..< b
 ```swift
 /** Nil coalescing **/
 a ?? b
+
+/** Ternary operators **/
+a ? b : c
 ```
 
 ## Collection types
@@ -338,26 +346,25 @@ protocol SomeProtocol {
 func sayHello(personName:String) -> String {
   return "Hello \(personName)!"
 }
+print(sayHello("Foobar")) // print "Hello Foobar!"
 
 func sayHello2(firstName:String, lastName:String) -> String {
   return "Hello \(firstName) \(lastName)!"
 }
+print(sayHello2("Chris", lastName:"Jeter")) // print "Hello Chris Jeter!"
 
 func sayHelloWorld() {
   print("Hello World")
 }
+sayHelloWorld() // print "Hello World"
 
-/** Function return function **/
+/** Function returning another function **/
 func minMax(array:[Int]) -> (min:Int, max:Int)? {
   var currentMin = array[0]
   var currentMax = array[array.count - 1]
   //Do something ...
   return (currentMin, currentMax)
 }
-
-print(sayHello("Foobar")) // print "Hello Foobar!"
-print(sayHello2("Chris", lastName:"Jeter")) // print "Hello Chris Jeter!"
-sayHelloWorld() // print "Hello World"
 
 /** External name and internal name **/
 func someFunction(firstParam: Int, secondParam: Int) {
@@ -369,6 +376,7 @@ func someFunction(externalParam localParam: Int) {
 }
 someFunction(externalParam:3) // print 3
 
+/** Function omitting external parameter **/
 func someFunction(firstParameterName: Int, _ secondParameterName: Int) {
 }
 someFunction(1, 2)
@@ -377,7 +385,6 @@ func someFunction(firstParam : Int = 6) {
   print(firstParam)
 }
 someFunction() // print 6
-
 
 func arithmeticMean(numbers: Double...) -> Double {
     var total: Double = 0
