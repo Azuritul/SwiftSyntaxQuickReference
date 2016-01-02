@@ -414,6 +414,12 @@ func chooseStepFunction(backwards: Bool) -> (Int) -> Int {
 
 ## Closure
 
+```swift
+{ (parameters) -> return type in
+    statements
+}
+```
+
 ## Error handling
 ```swift
 enum VendingMachineError: ErrorType {
