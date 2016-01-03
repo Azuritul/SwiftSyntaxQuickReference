@@ -2,10 +2,10 @@ Quick reference for Swift syntax
 ----
 I found it exceptionally necessary to have a syntax ref due to my bad memory,
 so I compiled this in one big markdown file.  Most of the snippet here are copied from apple's swift documentation site.
-Be aware that this is not a quick reference served as a quick reminder
+Be aware that this is a quick reference served as a reminder
 for those who already had programming experience on swift or other languages.
 
-For more thorough information on Swift language itself I recommend going to apple's swift documentation site.
+For more thorough information on Swift language I recommend going to apple's swift documentation site.
 If you are looking for quick guides with more detailed descriptions, there are a couple of cheatsheet repositories out there that did a great job and I myself also benefit a lot from them.
 
 **Notes** There are still many sections missing here. Feel free to add to this document.
@@ -28,7 +28,7 @@ If you are looking for quick guides with more detailed descriptions, there are a
 - [Enumerations](https://github.com/Azuritul/SwiftSyntaxQuickReference#enumerations)
 - [Protocols](https://github.com/Azuritul/SwiftSyntaxQuickReference#protocols)
 - [Functions](https://github.com/Azuritul/SwiftSyntaxQuickReference#functions)
-- [Closure]
+- [Closure](https://github.com/Azuritul/SwiftSyntaxQuickReference#closure)
 - [Error Handling](https://github.com/Azuritul/SwiftSyntaxQuickReference#error-handling)
 - [Type Casting](https://github.com/Azuritul/SwiftSyntaxQuickReference#type-casting)
 - [Access Control](https://github.com/Azuritul/SwiftSyntaxQuickReference#access-control)
