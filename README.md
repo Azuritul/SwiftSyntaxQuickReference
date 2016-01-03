@@ -418,6 +418,10 @@ func chooseStepFunction(backwards: Bool) -> (Int) -> Int {
 { (parameters) -> return type in
     statements
 }
+
+reversed = names.sort({ (s1: String, s2: String) -> Bool in
+    return s1 > s2
+})
 ```
 
 ## Error handling
