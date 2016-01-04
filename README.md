@@ -410,6 +410,12 @@ func chooseStepFunction(backwards: Bool) -> (Int) -> Int {
     // Do something...
 }
 
+/** Function type as parameter types **/
+func printMathResult(mathFunction: (Int, Int) -> Int, _ a: Int, _ b: Int) {
+    print("Result: \(mathFunction(a, b))")
+}
+printMathResult(addTwoInts, 3, 5)
+// prints "Result: 8"
 ```
 
 ## Closure
