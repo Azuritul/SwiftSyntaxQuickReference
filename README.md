@@ -35,6 +35,7 @@ If you are looking for quick guides with more detailed descriptions, there are a
 - [Generics]
 - [Extensions](https://github.com/Azuritul/SwiftSyntaxQuickReference#extensions)
 - [Optionals]
+- [Properties](https://github.com/Azuritul/SwiftSyntaxQuickReference#properties)
 
 ## Variable and Constant
 
@@ -537,5 +538,38 @@ extension Int {
 
 ## Optionals
 ```swift
+
+```
+
+## Properties
+```swift
+/** Stored properties **/
+struct FixedLengthRange {
+    var firstValue: Int
+    let length: Int
+}
+
+/** Computed properties **/
+struct Point {
+    var x = 0.0, y = 0.0
+}
+struct Size {
+    var width = 0.0, height = 0.0
+}
+struct Rect {
+    var origin = Point()
+    var size = Size()
+    var center: Point {
+        get {
+            let centerX = origin.x + (size.width / 2)
+            let centerY = origin.y + (size.height / 2)
+            return Point(x: centerX, y: centerY)
+        }
+        set(newCenter) {
+            origin.x = newCenter.x - (size.width / 2)
+            origin.y = newCenter.y - (size.height / 2)
+        }
+    }
+}
 
 ```
