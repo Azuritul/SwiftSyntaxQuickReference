@@ -32,7 +32,7 @@ If you are looking for quick guides with more detailed descriptions, there are a
 - [Error Handling](https://github.com/Azuritul/SwiftSyntaxQuickReference#error-handling)
 - [Type Casting](https://github.com/Azuritul/SwiftSyntaxQuickReference#type-casting)
 - [Access Control](https://github.com/Azuritul/SwiftSyntaxQuickReference#access-control)
-- [Generics]
+- [Generics](https://github.com/Azuritul/SwiftSyntaxQuickReference#generics)
 - [Extensions](https://github.com/Azuritul/SwiftSyntaxQuickReference#extensions)
 - [Optionals]
 - [Properties](https://github.com/Azuritul/SwiftSyntaxQuickReference#properties)
@@ -490,7 +490,99 @@ private func somePrivateFunction() {}
 ```
 
 ## Generics
+```swift
+/** Type constraints**/
+func someFunction<T: SomeClass, U: SomeProtocol>(someT: T, someU: U) {
+}
 
+/// Not every value of type T can be compared using == symbols, so using <T: Equatable>
+/// to enforce the type constraints here.
+func findIndex<T: Equatable>(array: [T], _ valueToFind: T) -> Int? {
+    for (index, value) in array.enumerate() {
+        if value == valueToFind {
+            return index
+        }
+    }
+    return nil
+}
+
+/** Associated Types **/
+protocol Container {
+    typealias ItemType
+    mutating func append(item: ItemType)
+    var count: Int { get }
+    subscript(i: Int) -> ItemType { get }
+}
+
+struct IntStack: Container {
+    // original IntStack implementation
+    var items = [Int]()
+    mutating func push(item: Int) {
+        items.append(item)
+    }
+    mutating func pop() -> Int {
+        return items.removeLast()
+    }
+    // conformance to the Container protocol
+    typealias ItemType = Int
+    mutating func append(item: Int) {
+        self.push(item)
+    }
+    var count: Int {
+        return items.count
+    }
+    subscript(i: Int) -> Int {
+        return items[i]
+    }
+}
+
+/// Remove the typealias is ok because Swift can inter the type info from methods
+struct Stack<Element>: Container {
+    // original Stack<Element> implementation
+    var items = [Element]()
+    mutating func push(item: Element) {
+        items.append(item)
+    }
+    mutating func pop() -> Element {
+        return items.removeLast()
+    }
+    // conformance to the Container protocol
+    mutating func append(item: Element) {
+        self.push(item)
+    }
+    var count: Int {
+        return items.count
+    }
+    subscript(i: Int) -> Element {
+        return items[i]
+    }
+}
+
+/** Extending an Existing Type to Specify an Associated Type **/
+extension Array: Container {}
+
+/** Type constraints with where clause **/
+func allItemsMatch<C1: Container, C2: Container where C1.ItemType == C2.ItemType, C1.ItemType: Equatable>
+    (someContainer: C1, _ anotherContainer: C2) -> Bool {
+
+        // check that both containers contain the same number of items
+        if someContainer.count != anotherContainer.count {
+            return false
+        }
+
+        // check each pair of items to see if they are equivalent
+        for i in 0..<someContainer.count {
+            if someContainer[i] != anotherContainer[i] {
+                return false
+            }
+        }
+
+        // all items match, so return true
+        return true
+
+}
+
+```
 
 ## Extensions
 ```swift
