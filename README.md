@@ -471,6 +471,52 @@ let photo = try! loadImage("./Resources/John Appleseed.jpg")
 |as!| Downcast|
 |as|  Match is switch case|
 
+```swift
+
+let library = [
+    Movie(name: "Casablanca", director: "Michael Curtiz"),
+    Song(name: "Blue Suede Shoes", artist: "Elvis Presley"),
+    Movie(name: "Citizen Kane", director: "Orson Welles"),
+    Song(name: "The One And Only", artist: "Chesney Hawkes"),
+    Song(name: "Never Gonna Give You Up", artist: "Rick Astley")
+]
+/** Check type **/
+for item in library {
+    if item is Movie {
+        ++movieCount
+    } else if item is Song {
+        ++songCount
+    }
+}
+
+/** Downcast using as? **/
+for item in library {
+    if let movie = item as? Movie {
+        print("Movie: '\(movie.name)', dir. \(movie.director)")
+    } else if let song = item as? Song {
+        print("Song: '\(song.name)', by \(song.artist)")
+    }
+}
+
+/** Downcast using as! **/
+for object in someObjects {
+    let movie = object as! Movie
+    print("Movie: '\(movie.name)', dir. \(movie.director)")
+}
+
+/** Matching type using as **/
+for thing in things {
+    switch thing {
+    case 0 as Int:
+        print("zero as an Int")
+    case 0 as Double:
+        print("zero as a Double")
+    }
+    //...blablabla
+}
+
+```
+
 
 ## Access Control
 |Keywords|
