@@ -429,6 +429,18 @@ printMathResult(addTwoInts, 3, 5)
 reversed = names.sort({ (s1: String, s2: String) -> Bool in
     return s1 > s2
 })
+
+// or simply
+reversed = names.sort( { s1, s2 in return s1 > s2 } )
+
+/** implicit return **/
+reversed = names.sort( { s1, s2 in s1 > s2 } )
+
+/** shorthand argument names **/
+reversed = names.sort( { $0 > $1 } )
+
+/** operator functions **/
+reversed = names.sort(>)
 ```
 
 ## Error handling
