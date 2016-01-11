@@ -26,6 +26,7 @@ If you are looking for quick guides with more detailed descriptions, there are a
 - [Control Structure](https://github.com/Azuritul/SwiftSyntaxQuickReference#control-structure)
 - [Classes](https://github.com/Azuritul/SwiftSyntaxQuickReference#classes)
 - [Enumerations](https://github.com/Azuritul/SwiftSyntaxQuickReference#enumerations)
+- [Initialization](https://github.com/Azuritul/SwiftSyntaxQuickReference#initialization)
 - [Protocols](https://github.com/Azuritul/SwiftSyntaxQuickReference#protocols)
 - [Functions](https://github.com/Azuritul/SwiftSyntaxQuickReference#functions)
 - [Closure](https://github.com/Azuritul/SwiftSyntaxQuickReference#closure)
@@ -326,6 +327,29 @@ enum OperationMode2 : String {
 /** Usage **/
 var operation = OperationMode.Read
 let mode = OperationMode2.Create.rawValue // mode is "Create"
+```
+
+## Initialization
+```swift
+/** Designated initializer**/
+init(parameters) {
+    //statements
+}
+
+/** convenience initializer **/
+convenience init(parameters) {
+    //statements
+}
+
+/** Failable initializer **/
+struct Animal {
+    let species: String
+    init?(species: String) {
+        if species.isEmpty { return nil }
+        self.species = species
+    }
+}
+
 ```
 
 ## Protocols
