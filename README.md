@@ -1,14 +1,12 @@
 Quick reference for Swift syntax
 ----
-I found it exceptionally necessary to have a syntax ref due to my bad memory,
-so I compiled this in one big markdown file.  Most of the snippet here are copied from apple's swift documentation site.
-Be aware that this is a quick reference served as a reminder
-for those who already had programming experience on swift or other languages.
+I found it exceptionally necessary to have a syntax ref due to my bad memory, so I compiled this in one big markdown file.  Most of the snippet here are copied from apple's swift documentation site.
+Be aware that this quick reference is served as a reminder for those who already had programming experience on swift or other languages.
 
-For more thorough information on Swift language I recommend going to apple's swift documentation site.
-If you are looking for quick guides with more detailed descriptions, there are a couple of cheat sheet repositories out there that did a great job and I myself also benefit a lot from them.
+For more thorough information on the language, I recommend going to apple's swift documentation site.
+If you are looking for quick guides with more detailed descriptions, there are a couple of cheat sheet repositories out there that did a great job.
 
-**Notes** There are still many sections missing here. Feel free to add to this document.
+**Notes** There are still lots of sections missing here. Feel free to add to this document.
 
 ## Table of Contents
 - [Variable and Constant](https://github.com/Azuritul/SwiftSyntaxQuickReference#variable-and-constant)
@@ -35,7 +33,7 @@ If you are looking for quick guides with more detailed descriptions, there are a
 - [Access Control](https://github.com/Azuritul/SwiftSyntaxQuickReference#access-control)
 - [Generics](https://github.com/Azuritul/SwiftSyntaxQuickReference#generics)
 - [Extensions](https://github.com/Azuritul/SwiftSyntaxQuickReference#extensions)
-- [Optionals]
+- [Optionals](https://github.com/Azuritul/SwiftSyntaxQuickReference#optionals)
 - [Properties](https://github.com/Azuritul/SwiftSyntaxQuickReference#properties)
 
 ## Variable and Constant
@@ -556,10 +554,10 @@ for thing in things {
 
 ## Access Control
 |Keywords|
-|---|
-|public|
-|internal|
-|private|
+ |---|
+ |public|
+ |internal|
+ |private|
 
 ```swift
 public class SomePublicClass {}
@@ -711,9 +709,7 @@ extension Int {
 ```
 
 ## Optionals
-```swift
 
-```
 
 ## Properties
 ```swift
