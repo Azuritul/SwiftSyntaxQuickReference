@@ -6,7 +6,7 @@ Be aware that this is a quick reference served as a reminder
 for those who already had programming experience on swift or other languages.
 
 For more thorough information on Swift language I recommend going to apple's swift documentation site.
-If you are looking for quick guides with more detailed descriptions, there are a couple of cheatsheet repositories out there that did a great job and I myself also benefit a lot from them.
+If you are looking for quick guides with more detailed descriptions, there are a couple of cheat sheet repositories out there that did a great job and I myself also benefit a lot from them.
 
 **Notes** There are still many sections missing here. Feel free to add to this document.
 
