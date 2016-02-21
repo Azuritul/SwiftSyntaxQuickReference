@@ -1,4 +1,3 @@
 # Summary
 
-* Variable and Constant
 
