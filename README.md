@@ -573,7 +573,7 @@ fileprivate func someFilePrivateFunction(){}
 private func somePrivateFunction() {}
 ```
 
-* Cannot specify types directly for Tuple, the type is deduced from the most restrictive type in the tuple automatically.
+* Cannot specify access control modifier directly for Tuple, the modifier is deduced from the most restrictive type in the tuple automatically.
   
 
 ## Generics
