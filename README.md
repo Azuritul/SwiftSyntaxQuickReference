@@ -33,7 +33,6 @@ If you are looking for quick guides with more detailed descriptions, there are a
 - [Access Control](https://github.com/Azuritul/SwiftSyntaxQuickReference#access-control)
 - [Generics](https://github.com/Azuritul/SwiftSyntaxQuickReference#generics)
 - [Extensions](https://github.com/Azuritul/SwiftSyntaxQuickReference#extensions)
-- [Optionals](https://github.com/Azuritul/SwiftSyntaxQuickReference#optionals)
 - [Properties](https://github.com/Azuritul/SwiftSyntaxQuickReference#properties)
 
 ## Variable and Constant
@@ -61,8 +60,8 @@ var d = 8 / 8
 var e = 9 % 3
 
 /** Increment and decrement **/
-i++
-i--
+i += 1
+i -= 1
 ```
 
 ### Comparison Operators
@@ -216,9 +215,10 @@ for index in 1...5 {
   //Do something
 }
 
-for var i = 0; i < 5; i++ {
+for i in 0..<60 {
   //Do something
 }
+
 ```
 ### While
 ```swift
@@ -517,9 +517,9 @@ let library = [
 /** Check type **/
 for item in library {
     if item is Movie {
-        ++movieCount
+        movieCount += 1
     } else if item is Song {
-        ++songCount
+        songCount += 1
     }
 }
 
@@ -550,6 +550,9 @@ for thing in things {
 }
 
 ```
+
+- `Any` represents an instance of any type at all, including function types.
+- `AnyObject` represents an instance of any class type.
 
 
 ## Access Control
@@ -713,8 +716,6 @@ extension Int {
 }
 
 ```
-
-## Optionals
 
 
 ## Properties
