@@ -555,8 +555,10 @@ for thing in things {
 ## Access Control
 |Keywords|
  |---|
+ |open|
  |public|
  |internal|
+ |fileprivate|
  |private|
 
 ```swift
