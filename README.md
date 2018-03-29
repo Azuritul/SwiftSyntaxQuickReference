@@ -574,7 +574,6 @@ private func somePrivateFunction() {}
 ```
 
 * Cannot specify access control modifier directly for Tuple, the modifier is deduced from the most restrictive type in the tuple automatically.
-  
 
 ## Generics
 ```swift
