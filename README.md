@@ -325,6 +325,20 @@ enum OperationMode2 : String {
 /** Usage **/
 var operation = OperationMode.Read
 let mode = OperationMode2.Create.rawValue // mode is "Create"
+
+/** Use with switch case **/
+directionToHead = .south
+switch directionToHead {
+case .north:
+    print("Lots of planets have a north")
+case .south:
+    print("Watch out for penguins")
+case .east:
+    print("Where the sun rises")
+case .west:
+    print("Where the skies are blue")
+}
+
 ```
 
 ## Initialization
